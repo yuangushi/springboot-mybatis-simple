@@ -1,11 +1,10 @@
-package com.ylp.test.mapper;
+package com.ylp.test.service;
 
 import com.ylp.test.entity.User;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
-public interface UserMapper {
 
+public interface UserService {
     User getUserById(String id);
 
     List<User> getAllUser();
