@@ -20,6 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(String id) {
+
         return userMapper.getUserById(id);
     }
 
@@ -34,5 +35,16 @@ public class UserServiceImpl implements UserService {
     //去除重复的数据,从springboot加载autoConfiguration里学到的
     public <T> List<T> removeDulipates(List<T> list){
         return new ArrayList<>(new LinkedList<>(list));
+    }
+
+    public int insertUser(User u){
+        int i=0;
+        try{
+            userMapper.insertUser(u);
+            int a=1/i;
+        }catch (Exception e){
+            throw e;
+        }
+        return i;
     }
 }

@@ -1,15 +1,24 @@
 package com.ylp.test.entity;
 
 public class User {
-    private String id;
+    private Integer id;
     private String userName;
     private Integer age;
+    public User(){
 
-    public String getId() {
+    }
+
+    public User(Integer id,String userName,Integer age){
+        this.id=id;
+        this.userName=userName;
+        this.age=age;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -27,5 +36,14 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
