@@ -18,11 +18,23 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(String id) {
+
         return userMapper.getUserById(id);
     }
 
     @Override
     public List<User> getAllUser() {
         return userMapper.getAllUser();
+    }
+
+    public int insertUser(User u){
+        int i=0;
+        try{
+            userMapper.insertUser(u);
+            int a=1/i;
+        }catch (Exception e){
+            throw e;
+        }
+        return i;
     }
 }

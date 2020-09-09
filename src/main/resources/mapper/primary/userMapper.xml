@@ -6,9 +6,22 @@
     <select id="getUserById" resultType="user">
         select * from user where id=#{id};
     </select>
-
+<sql id="base_colum">
+    user_name,age
+</sql>
     <select id="getAllUser" resultType="user">
         select * from user;
     </select>
+
+    <insert id="insertUser" parameterType="com.ylp.test.entity.User">
+        insert into user
+        <trim prefix="(" suffix=")">
+            <include refid="base_colum" />
+        </trim>
+        <trim prefix="values (" suffix=")">
+            #{userName,jdbcType=VARCHAR},
+            #{age,jdbcType=INTEGER}
+        </trim>
+    </insert>
 
 </mapper>
