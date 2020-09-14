@@ -16,9 +16,9 @@ import java.util.Date;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-@Configuration
-@EnableScheduling
+//
+//@Configuration
+//@EnableScheduling
 public class TaskCronChange implements SchedulingConfigurer {
 
     @Autowired
